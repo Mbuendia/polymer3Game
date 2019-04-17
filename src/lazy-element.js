@@ -18,7 +18,7 @@ class LazyElement extends PolymerElement {
     // Template getter must return an instance of HTMLTemplateElement.
     // The html helper function makes this easy.
     return html`
-      <p>You like pie.</p>
+      <p>Let's Get Started</p>
     `;
   }
 }

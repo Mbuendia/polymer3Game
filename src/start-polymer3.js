@@ -42,7 +42,7 @@ class StartPolymer3 extends PolymerElement {
     // Resolve warning about scroll performance 
     // See https://developers.google.com/web/updates/2016/06/passive-event-listeners
     setPassiveTouchGestures(true);
-    this.message = 'Hello World! I\'m a Polymer element :)';
+    this.message = 'Hello World!';
   }
 
   ready(){
@@ -71,20 +71,25 @@ class StartPolymer3 extends PolymerElement {
     // The html helper function makes this easy.
     return html`
       <style>
+        :host {
+          margin: 8px;
+          position: relative;
+          top: 10vh;
+        }
         paper-checkbox {
           --paper-checkbox-checked-ink-color: #FFFFFF;
           --paper-checkbox-unchecked-ink-color: #FFFFFF;
         }
       </style>
 
-      <h1>Start Polymer 3.0</h1>
+
       <p>[[message]]</p>
       <paper-checkbox id="omgpie"
         toggles
         noink
-        checked={{pie}}>I like pie.</paper-checkbox>
+        checked={{pie}}>Do you want to Start?</paper-checkbox>
       <template is="dom-if" if=[[pie]]>
-        <lazy-element><p>lazy loading...</p></lazy-element>
+        <lazy-element><p>lloading...</p></lazy-element>
       </template>
     `;
   }
